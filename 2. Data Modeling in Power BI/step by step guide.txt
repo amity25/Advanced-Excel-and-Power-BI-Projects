@@ -1,0 +1,225 @@
+Get the cleaned_sales_data.xlsx file from Advanced-Excel-and-Power-BI-Projects /1. Sales Data Analysis Pipeline (Excel + Power BI)
+
+
+DATA MODELING IN POWER BI
+
+👉 This is next-level Power BI skill
+
+👉 This is the first real “advanced” skill in Power BI
+👉 Most freshers skip this—so this gives you an edge
+
+🧠 What You’ll Learn in This Step
+
+Right now your data is in one single table ❌
+We’ll convert it into a proper data model (multiple tables + relationships) ✅
+
+This is how real companies work.
+
+
+
+🟢 Step 1: Understand the Goal
+
+We will split your data into 3 tables:
+
+📊 Final Structure:
+Cleaned Table (Fact Table)
+→ Contains transactions (Sales, Quantity, Revenue)
+Customer Table (Dimension)
+→ Customer details
+Product Table (Dimension)
+→ Product & Category info
+
+
+🟢 Step 2: Duplicate Your Table (Important)
+Open Power BI
+
+Go to:
+
+Home → Transform Data
+
+(This opens Power Query)
+
+Now:
+
+Right-click your table → Click:
+
+Duplicate
+
+👉 Do this 2 times
+
+Now you have:
+
+Cleaned (original)
+Cleaned (2)
+Cleaned (3)
+
+
+🟢 Step 3: Create Customer Table
+Click Cleaned (2)
+
+Rename it:
+
+Customers
+Keep only these columns:
+Customer_Name
+Region
+Remove others:
+Select unwanted columns
+Right-click → Remove Columns
+Remove duplicates:
+Select both columns
+
+Click:
+
+Remove Rows → Remove Duplicates
+
+👉 Now you have a clean Customer table
+
+
+
+🟢 Step 4: Create Product Table
+Click Cleaned (3)
+
+Rename it:
+
+Products
+Keep only:
+Product
+Category
+Remove duplicates (same way)
+
+👉 Now you have a Product table
+
+
+
+🟢 Step 5: Load Data
+
+Click:
+
+Close & Apply
+
+
+🟢 Step 6: Create Relationships (MOST IMPORTANT)
+
+🟢 a: Go to Model View
+Open your Power BI file
+
+On the left sidebar, click the icon that looks like:
+
+small boxes connected with lines
+
+👉 This is called Model View
+
+🟢 b: Understand What You See
+
+You should see 3 tables:
+
+Cleaned
+Customers
+Products
+
+👉 Each table has columns listed inside it
+
+🟢 c: Create Customer Relationship
+🎯 Goal:
+
+Connect Sales → Customers
+
+Do this:
+
+Find column in Cleaned table:
+
+Customer_Name
+Click and HOLD it
+
+Drag it to:
+
+Customers → Customer_Name
+Release mouse
+🧠 What happens:
+
+A line appears between tables
+
+⚙️ Check Relationship Settings (Important)
+
+A popup may appear. If yes:
+
+Cardinality:
+
+Many to One (*:1)
+
+Cross filter direction:
+
+Single
+
+Click:
+
+OK
+
+🟢 d: Create Product Relationship
+🎯 Goal:
+
+Connect Sales → Products
+
+Do this:
+
+In Cleaned table, find:
+
+Product
+
+Drag it to:
+
+Products → Product
+Again check:
+
+Cardinality:
+
+Many to One (*:1)
+
+Click:
+
+OK
+
+🟢 e: Verify Relationship Type (VERY IMPORTANT)
+
+Click on the line between tables
+
+👉 You should see:
+
+* -------- 1
+
+Meaning:
+* = Many (Cleaned table)
+1 = One (Customers / Products table)
+
+🟢 f: Final Model View (What It Should Look Like)
+
+You should see this structure:
+
+Customers      Products
+     \          /
+      \        /
+        Cleaned
+
+OR conceptually:
+
+Customers → Cleaed ← Products
+
+⭐ This is called: STAR SCHEMA
+
+🧠 What is Star Schema? (Simple)
+Center = Sales (Fact table)
+Sides = Customers, Products (Dimension tables)
+
+👉 Looks like a star ⭐
+
+
+“I designed a star schema data model by separating fact and dimension tables and creating relationships for efficient analysis.”
+
+
+💡 What You Just Learned
+
+✔ Data modeling
+✔ Fact vs Dimension tables
+✔ Relationships
+✔ Star schema
