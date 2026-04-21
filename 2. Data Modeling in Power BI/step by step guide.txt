@@ -1,5 +1,7 @@
 Get the cleaned_sales_data.xlsx file from Advanced-Excel-and-Power-BI-Projects /1. Sales Data Analysis Pipeline (Excel + Power BI)
 
+I have renamed the file to "Cleaned". You can keep any name 
+
 
 DATA MODELING IN POWER BI
 
