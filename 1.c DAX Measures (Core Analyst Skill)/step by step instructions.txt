@@ -1,4 +1,4 @@
-Download the Cleaned file from 1.a Sales Data Analysis Pipeline (Excel + Power BI) for this project
+Download the Sales Data Analysis Pipeline (Excel + Power BI).pbix file from 1.a Sales Data Analysis Pipeline (Excel + Power BI) for this project
 
 DAX MEASURES (UPDATED WITH "Cleaned" TABLE)
 
