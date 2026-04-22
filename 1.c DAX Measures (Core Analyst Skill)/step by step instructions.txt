@@ -1,4 +1,7 @@
+Download the Cleaned file from 1.a Sales Data Analysis Pipeline (Excel + Power BI) for this project
+
 DAX MEASURES (UPDATED WITH "Cleaned" TABLE)
+
 🧠 What is DAX? (Very Simple Explanation)
 
 👉 DAX (Data Analysis Expressions) = formulas used in Power BI
@@ -10,7 +13,9 @@ Measure → dynamic calculation (changes with filters)
 
 👉 In real projects → we use Measures
 
+
 🟢 Step 1: Where to Create Measure
+
 Open Power BI
 Go to Report View (chart icon on left)
 On right side (Fields panel)
@@ -22,19 +27,25 @@ Cleaned
 Right-click → Click:
 
 New Measure
+
 🖥️ What you’ll see:
 
 A formula bar appears at the top like:
 
 Measure =
+
+
 🟢 Step 2: Create Total Revenue (MOST IMPORTANT)
+
 📊 Formula:
-Total Revenue = 
+
+Total Rev = 
 SUMX(
     Cleaned,
     Cleaned[Sales] * Cleaned[Quantity] * (1 - Cleaned[Discount])
 )
 🧠 Explanation (Very Important)
+
 🔹 SUMX means:
 
 👉 “Go row by row and calculate, then add everything”
@@ -48,7 +59,7 @@ Sales × Quantity
 Apply Discount
 
 Then:
-👉 SUMX adds all rows → Total Revenue
+👉 SUMX adds all rows → Total Rev
 
 🖥️ What you’ll see:
 
@@ -56,21 +67,36 @@ A new field:
 
 Total Revenue
 With a calculator icon 🧮 (means measure)
+
+
 🟢 Step 3: Create Total Sales
+
 Total Sales = SUM(Cleaned[Sales])
+
 🧠 Explanation:
+
 SUM = simple addition of a column
 No row-level calculation needed
+
+
 🟢 Step 4: Create Total Quantity
+
 Total Quantity = SUM(Cleaned[Quantity])
+
+
 🟢 Step 5: Create Average Sales
+
 Avg Sales = AVERAGE(Cleaned[Sales])
+
 🧠 Explanation:
 
 👉 Finds average value of Sales column
 
+
 🟢 Step 6: Create Profit (Important)
+
 📊 Formula:
+
 Profit = 
 SUMX(
     Cleaned,
@@ -85,11 +111,14 @@ Profit = 20% of revenue
 So:
 
 Revenue × 0.2
+
+
 🟢 Step 7: Profit Margin %
+
 Profit Margin % = 
 DIVIDE(
     [Profit],
-    [Total Revenue]
+    [Total Rev]
 )
 🧠 Why DIVIDE (not /)?
 
@@ -97,16 +126,21 @@ DIVIDE(
 👉 This is best practice
 
 🎯 Format it:
+
 Click measure
 Go to Top menu → Format → Percentage (%)
+
+
 🟢 Step 8: Time Intelligence (Advanced 🚀)
+
 🔹 Revenue Last Year
 Revenue LY = 
 CALCULATE(
-    [Total Revenue],
+    [Total Rev],
     SAMEPERIODLASTYEAR(Cleaned[Order_Date])
 )
 🧠 Explanation:
+
 CALCULATE → changes filter context
 SAMEPERIODLASTYEAR → shifts date back 1 year
 
@@ -115,15 +149,38 @@ SAMEPERIODLASTYEAR → shifts date back 1 year
 🔹 Growth %
 Growth % = 
 DIVIDE(
-    [Total Revenue] - [Revenue LY],
+    [Total Rev] - [Revenue LY],
     [Revenue LY]
 )
 
 👉 Format as %
 
+
 🟢 Step 9: Use Measures in Dashboard
+
 Replace everything with measures:
+
 Visual	Use
-KPI Card	Total Revenue
-Bar Chart	Total Revenue
-New Cards	Profit, Profit Margin %
+
+✅ Card Visual (what you should use)
+Requires:
+Only one value (measure)
+
+👉 Perfect for:
+
+Total Revenue
+Profit
+Profit %
+
+
+✔ Profit Card
+
+Add new Card
+Drag: Profit
+
+
+
+✔ Profit Margin Card
+
+Add new Card
+Drag: Profit Margin %
