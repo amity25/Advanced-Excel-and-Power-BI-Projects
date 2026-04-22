@@ -1,5 +1,9 @@
-🚀 STEP 7: ADVANCED INTERACTIVITY
+Download the file from 1.c DAX Measures (Core Analyst Skill)
+
+ADVANCED INTERACTIVITY
+
 🔍 PART 1: DRILL-THROUGH (MOST IMPORTANT)
+
 🧠 What is Drill-through?
 
 👉 It lets you:
@@ -10,6 +14,7 @@ Open a detailed page for that selection
 Example:
 👉 Click “North” → See all details for North only
 
+
 🟢 Step 1: Create Drill-through Page
 
 At bottom, click:
@@ -19,42 +24,49 @@ At bottom, click:
 Rename it:
 
 Region Details
+
+
 🟢 Step 2: Add Drill-through Filter
+
 Click empty space on new page
 
 On right side, find:
 
 Drill-through section
 
-Drag:
-
-Region
-
-into it
+Drag: Region into it
 
 ✅ You’ll see:
+
 “Add drill-through fields here”
 → Region added
 
 👉 Now this page is linked to Region
+
 
 🟢 Step 3: Add Visuals to Drill Page
 
 Add these visuals:
 
 📊 A. Table
+
 Click Table visual
 Add:
 Customer_Name
 Product
 Total Revenue
+
 📊 B. Bar Chart
+
 Axis → Product
 Values → Total Revenue
+
 📊 C. Card
+
 Total Revenue
 
 👉 This page now shows detailed breakdown
+
 
 🟢 Step 4: Add Back Button
 
@@ -64,6 +76,7 @@ Insert → Buttons → Back
 Place it on top
 
 👉 This lets user go back to main dashboard
+
 
 🟢 Step 5: Use Drill-through (TEST)
 Go back to Main Dashboard
@@ -75,24 +88,34 @@ Region (e.g., North)
 Click:
 
 Drill-through → Region Details
+
 🎯 Result:
 
 👉 New page opens showing ONLY North data
 
 🎉 Drill-through complete!
+
+
+
+
 🔘 PART 2: BUTTONS (NAVIGATION)
+
 🧠 What are Buttons?
 
 👉 Used for:
 
 Navigation between pages
 Making dashboard interactive
+
+
 🟢 Step 6: Add Navigation Button
 Go to main dashboard
 
 Click:
 
 Insert → Buttons → Blank
+
+
 🟢 Step 7: Configure Button
 Select button
 Go to Format panel
@@ -107,6 +130,8 @@ Page Navigation
 Destination:
 
 Region Details
+
+
 🟢 Step 8: Rename Button
 
 Turn ON:
@@ -119,6 +144,7 @@ View Region Details
 
 👉 Now button is clickable
 
+
 🟢 Step 9: Test Button
 
 Hold:
@@ -128,9 +154,11 @@ Click button
 
 👉 It should take you to Region Details page
 
+
 🟢 Step 10: Final User Flow
 
 Now your dashboard works like this:
+
 
 Main Dashboard
    ↓
@@ -141,6 +169,8 @@ Drill-through Page (Detailed View)
 Back Button
    ↓
 Main Dashboard
+
+
 💡 What You Just Built
 
 ✔ Multi-page dashboard
@@ -155,7 +185,3 @@ Main Dashboard
 ❌ Drill-through not working → Region not added
 ❌ Button not working → Action OFF
 ❌ Can’t click button → Forgot Ctrl
-
-🧠 Interview Gold Line
-
-“I implemented drill-through functionality and navigation buttons to enable detailed analysis and improve user interaction within the Power BI dashboard.”
