@@ -1,0 +1,154 @@
+REAL BUSINESS DAX (LEVEL 2 CORE)
+🧠 What You’ll Build
+
+Using your 3 tables:
+
+Sales
+Product_Cost
+Targets
+
+👉 You’ll create:
+
+✔ Real Revenue
+✔ Real Cost
+✔ Real Profit
+✔ Target vs Actual
+✔ Performance %
+
+🟢 Step 1: Where to Create Measures
+Go to Report View
+
+In Fields panel, right-click:
+
+Sales
+
+Click:
+
+New Measure
+
+👉 Always create measures inside Sales table
+
+🟢 Step 2: Total Revenue (Base Measure)
+Total Revenue =
+SUMX(
+    Sales,
+    Sales[Sales] * Sales[Quantity] * (1 - Sales[Discount])
+)
+🧠 Explanation:
+
+👉 For each row:
+
+Sales × Quantity
+Apply discount
+
+👉 Then sum all rows
+
+🟢 Step 3: Total Cost (NEW 🔥)
+Total Cost =
+SUMX(
+    Sales,
+    Sales[Quantity] * RELATED(Product_Cost[Cost_Price])
+)
+🧠 Explanation (IMPORTANT):
+
+👉 RELATED() pulls data from another table
+
+So:
+
+It finds cost price from Product_Cost
+Multiplies by Quantity
+
+👉 This is real business logic
+
+🟢 Step 4: Real Profit
+Profit =
+[Total Revenue] - [Total Cost]
+
+👉 Simple but powerful
+
+🟢 Step 5: Profit Margin %
+Profit Margin % =
+DIVIDE(
+    [Profit],
+    [Total Revenue]
+)
+
+👉 Format as %
+
+🟢 Step 6: Target Sales (From Targets Table)
+Total Target =
+SUM(Targets[Target_Sales])
+
+👉 This comes from a different table
+
+🟢 Step 7: Target vs Actual (NEW 🔥)
+Target vs Actual =
+[Total Revenue] - [Total Target]
+
+👉 Shows:
+
+Positive → Good
+Negative → Bad
+🟢 Step 8: Performance % (VERY IMPORTANT)
+Performance % =
+DIVIDE(
+    [Total Revenue],
+    [Total Target]
+)
+
+👉 Format as %
+
+🟢 Step 9: Monthly Comparison (Powerful Insight)
+
+Use in line chart:
+
+Axis → Month
+Values →
+Total Revenue
+Total Target
+
+👉 Shows:
+Actual vs Target trend
+
+🟢 Step 10: Test Everything
+
+Try:
+
+Select Month = Jan
+Select Region = North
+
+👉 All values should change dynamically
+
+💡 What You Just Learned
+
+✔ SUMX() → row-level calculation
+✔ RELATED() → connect tables
+✔ Business KPIs
+✔ Performance tracking
+
+⚠️ Common Mistakes
+❌ RELATED not working?
+
+👉 Relationship not created properly
+
+❌ Wrong numbers?
+
+👉 Check:
+
+Cost table duplicates
+Wrong joins
+❌ Target not matching?
+
+👉 Month mismatch (Jan vs January)
+
+🧠 Interview Gold Line
+
+“I used DAX functions like SUMX and RELATED to calculate real profit and performance KPIs by integrating multiple datasets.”
+
+🚀 What You Just Achieved
+
+Your project now includes:
+
+✔ Multi-table model
+✔ Real business calculations
+✔ KPI analysis
