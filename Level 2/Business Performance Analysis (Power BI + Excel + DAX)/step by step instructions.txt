@@ -1,0 +1,529 @@
+🚀 NEXT PROJECT (LEVEL 2)
+
+📊 Business Performance Dashboard (Multi-Table + Real Business Logic)
+🧠 What Makes This “One Step Advanced”?
+
+Level 1 Project 
+
+✔ Single dataset
+✔ Basic metrics
+
+👉 New project will add ONE major upgrade:
+
+🔥 👉 Multiple Data Sources + Business KPIs
+
+This is what real companies do.
+
+📁 Project Name
+Business Performance Analysis (Power BI + Excel + DAX)
+🎯 What You’ll Learn (ONLY 1 LEVEL UP)
+
+We will add:
+
+🆕 NEW SKILL:
+
+👉 Multiple tables with business logic
+
+🧩 Data You’ll Work With
+
+Instead of one table, you’ll use 3 datasets:
+
+1️⃣ Sales Data (you already know)
+Order_ID
+Product
+Sales
+Quantity
+Discount
+2️⃣ Product Cost Data (NEW 🔥)
+Product
+Cost Price
+
+👉 Used to calculate real profit
+
+3️⃣ Targets Data (NEW 🔥)
+Month
+Target Sales
+
+👉 Used to calculate:
+
+Target vs Actual
+Performance %
+🧠 What Changes from Previous Project?
+Feature	Old Project	New Project
+Tables	1	3
+Profit	Assumed	Real (Sales - Cost)
+KPIs	Basic	Business KPIs
+Analysis	Static	Performance tracking
+🎯 Final Dashboard Will Show:
+
+✔ Total Revenue
+✔ Total Profit (real)
+✔ Target vs Actual
+✔ Performance %
+✔ Monthly Trend vs Target
+✔ Underperforming products
+
+🛠️ Tools (Same as before)
+Excel
+Power BI
+DAX
+
+👉 No new tool = less stress 👍
+
+
+Perfect—let’s start building your next-level project step-by-step 🚀
+No rush, just like before.
+
+🟢 STEP 1: CREATE ADVANCED DATASET (3 TABLES)
+
+👉 In this step, you will create 3 separate files
+This simulates real-world data coming from different sources.
+
+📁 Folder Structure (Important)
+
+Create a new project folder:
+
+business-performance-project/
+│
+├── data/
+│   ├── sales_data.csv
+│   ├── product_cost.csv
+│   ├── targets.csv
+🟢 Step 1A: Create Sales Data
+1. Open Notepad or Excel
+Paste this:
+Order_ID,Order_Date,Customer_Name,Region,Product,Category,Sales,Quantity,Discount
+1001,2024-01-05,Amit Sharma,North,Laptop,Electronics,55000,1,0.10
+1002,2024-01-07,Riya Singh,West,Phone,Electronics,30000,2,0.05
+1003,2024-01-10,John Doe,South,Table,Furniture,7000,1,0.00
+1004,2024-01-15,Ankit Verma,East,Chair,Furniture,2500,4,0.15
+1005,2024-01-18,Neha Gupta,North,Headphones,Accessories,2000,3,0.10
+1006,2024-02-02,Rahul Mehta,West,Phone,Electronics,28000,2,0.05
+1007,2024-02-10,Chris Evans,South,Laptop,Electronics,60000,1,0.10
+1008,2024-02-15,Priya Singh,East,Chair,Furniture,2600,2,0.20
+1009,2024-03-01,Amit Sharma,North,Laptop,Electronics,58000,1,0.10
+1010,2024-03-05,Riya Singh,West,Phone,Electronics,32000,2,0.05
+3. Save as:
+sales_data.csv
+🟢 Step 1B: Create Product Cost Data (NEW 🔥)
+1. Open new file
+Paste:
+Product,Cost_Price
+Laptop,40000
+Phone,20000
+Table,4000
+Chair,1500
+Headphones,1200
+3. Save as:
+product_cost.csv
+🟢 Step 1C: Create Target Data (NEW 🔥)
+1. Open new file
+Paste:
+Month,Target_Sales
+Jan,150000
+Feb,180000
+Mar,200000
+3. Save as:
+targets.csv
+🧠 What You Just Created
+📊 1. Sales Table
+
+👉 Your main transaction data
+
+💰 2. Cost Table
+
+👉 Used to calculate:
+
+Profit = Revenue - Cost
+🎯 3. Target Table
+
+👉 Used to calculate:
+
+Target vs Actual
+Performance %
+
+Great—now we move to the next step, slowly and clearly 👇
+
+🟢 STEP 2: IMPORT & CLEAN DATA (POWER BI)
+
+👉 In this step, you’ll:
+
+Import all 3 files
+Clean them properly
+Prepare for modeling
+🟢 Step 2A: Import All Files into Power BI
+📊 1. Open Power BI Desktop
+📥 2. Import Sales Data
+
+Click:
+
+Home → Get Data → Text/CSV
+
+Select:
+
+sales_data.csv
+
+Click:
+
+Transform Data
+
+👉 (IMPORTANT: don’t click Load yet)
+
+📥 3. Import Product Cost
+
+In Power Query:
+
+Home → New Source → Text/CSV
+
+Select:
+
+product_cost.csv
+
+Click:
+
+OK
+📥 4. Import Targets Data
+
+Repeat same:
+
+Load:
+
+targets.csv
+
+👉 Now you’ll see 3 tables on left side
+
+
+🟢 Step 2B: Clean Sales Table
+🔹 1. Rename Table
+Right-click table name
+
+Rename to:
+
+Sales
+🔹 2. Fix Data Types
+
+Click each column and set:
+
+Column	Type
+Order_Date	Date
+Sales	Decimal Number
+Quantity	Whole Number
+Discount	Decimal
+🔹 3. Add Month Column
+
+Click:
+
+Add Column → Date → Month → Name of Month
+
+👉 New column: Jan, Feb, Mar
+
+🔹 4. Add Year Column
+
+Click:
+
+Add Column → Date → Year → Year
+🟢 Step 2C: Clean Product Cost Table
+🔹 Rename:
+Product_Cost
+🔹 Check:
+Product → Text
+Cost_Price → Decimal
+
+👉 No extra cleaning needed
+
+🟢 Step 2D: Clean Targets Table
+🔹 Rename:
+Targets
+🔹 Ensure:
+Month → Text
+Target_Sales → Decimal
+🟢 Step 2E: Close & Apply
+
+Click:
+
+Close & Apply
+
+👉 Data will load into Power BI
+
+🧠 What You Just Did
+
+✔ Imported multiple datasets
+✔ Cleaned data types
+✔ Created Month & Year
+✔ Prepared for modeling
+
+⚠️ Common Mistakes
+
+❌ Clicking Load instead of Transform
+❌ Wrong data types (dates as text)
+❌ Forgetting Month column
+
+🔥 Why This Step Matters
+
+Now you can:
+
+Join tables
+Compare actual vs target
+Calculate real profit
+
+👉 This is real business analysis
+
+
+Good question—this is an important step 👍
+I’ll show you 2 ways, but you should follow the Power Query method (best practice).
+
+✅ METHOD 1 (RECOMMENDED): Add Year in Power Query
+🟢 Step-by-Step
+🟢 Step 1: Open Power Query
+
+In Power BI:
+
+Home → Transform Data
+
+👉 Power Query window opens
+
+🟢 Step 2: Select Sales Table
+
+On left side, click:
+
+Sales
+🟢 Step 3: Select Order_Date Column
+
+Click on:
+
+Order_Date
+
+👉 Important: Column must be Date type
+
+🟢 Step 4: Add Year Column
+
+Go to top menu:
+
+Add Column → Date → Year → Year
+✅ Result:
+
+A new column appears:
+
+Year
+
+With values like:
+
+2024
+🟢 Step 5: Rename Column (if needed)
+Double-click column name
+Ensure it is:
+Year
+🟢 Step 6: Apply Changes
+
+Click:
+
+Close & Apply
+
+
+
+🧠 What You Just Did
+
+👉 Extracted Year from Date column
+👉 This is used for:
+
+Filtering
+Time analysis
+Growth calculations
+⚠️ If You Don’t See “Date” Options
+
+👉 That means your column is not date type
+
+Fix it:
+Select Order_Date
+
+Go to:
+
+Transform → Data Type → Date
+
+Then repeat Step 4
+
+❌ METHOD 2 (NOT RECOMMENDED BUT EASY)
+
+You can also create a DAX column:
+
+Go to Data View
+
+Click:
+
+New Column
+Enter:
+Year = YEAR(Sales[Order_Date])
+
+👉 But:
+
+❌ This is less efficient
+✅ Use Power Query method (Method 1)
+
+💡 Pro Tip (Important)
+
+Always prefer:
+
+Power Query → for data cleaning
+DAX → for calculations
+🚀 Next Step
+
+Now that Year is added, you're ready for:
+
+👉 
+STEP 3: Data Modeling (connecting tables)
+
+
+🔗 STEP 3: CONNECT ALL 3 TABLES (DATA MODELING)
+🧠 First Understand the Goal
+
+You have 3 tables:
+
+Sales
+Product_Cost
+Targets
+
+👉 We need to connect them like this:
+
+Product_Cost → Sales ← Targets
+🟢 Step 1: Go to Model View
+
+In Power BI (left side), click:
+
+Model icon (diagram symbol)
+
+👉 You’ll see all 3 tables
+
+🟢 Step 2: Connect Product_Cost → Sales
+🎯 Goal:
+
+Connect products with their cost
+
+📌 Do this:
+
+In Sales table, find:
+
+Product
+Click and HOLD it
+
+Drag it to:
+
+Product_Cost → Product
+Release mouse
+⚙️ A popup may appear:
+
+Set:
+
+Cardinality:
+
+Many to One (*:1)
+Click:
+OK
+✅ Result:
+
+You’ll see a line:
+
+Sales (*) -------- (1) Product_Cost
+🟢 Step 3: Connect Targets → Sales (IMPORTANT)
+🎯 Goal:
+
+Connect Month with target
+
+⚠️ Important Check First:
+
+Make sure:
+
+Sales has Month column (Jan, Feb, Mar)
+Targets has Month column
+📌 Do this:
+
+In Sales table, find:
+
+Month
+
+Drag it to:
+
+Targets → Month
+⚙️ Set:
+Cardinality:
+Many to One (*:1)
+
+Click:
+
+OK
+✅ Result:
+Sales (*) -------- (1) Targets
+🟢 Step 4: Final Model Should Look Like
+        Product_Cost
+             |
+             |
+           Sales
+             |
+             |
+          Targets
+
+👉 This is again a Star Schema ⭐
+
+🟢 Step 5: Verify Relationships
+
+Click each line and check:
+
+* -------- 1
+
+👉 Means:
+
+Sales = Many side
+Others = One side
+🟢 Step 6: Test If It Works
+
+Go to Report View
+
+Test 1:
+Create a table
+Add:
+Product (from Product_Cost)
+Sales (from Sales)
+
+👉 If data appears → ✅ working
+
+Test 2:
+Add:
+Month (from Sales)
+Target_Sales (from Targets)
+
+👉 If values show → ✅ working
+
+⚠️ Common Mistakes (Very Important)
+❌ Relationship not working?
+
+Check:
+
+Column names must match exactly
+Month format same (Jan vs January ❌)
+❌ Wrong Cardinality?
+
+👉 Always:
+
+Many (Sales) → One (lookup tables)
+❌ Duplicate values in lookup table?
+
+👉 Remove duplicates in:
+
+Product_Cost
+Targets
+💡 Pro Tip (Important)
+
+Think like this:
+
+Sales = main data (transactions)
+Others = supporting tables
+🧠 Interview Gold Line
+
+“I created relationships between sales, cost, and target tables using a star schema to enable multi-source business analysis.”
+
+🚀 What You Just Built
+
+✔ Multi-table model
+✔ Business-ready structure
+✔ Foundation for advanced DAX
+
+
