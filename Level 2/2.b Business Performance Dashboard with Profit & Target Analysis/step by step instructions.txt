@@ -1,4 +1,7 @@
+You can use the Power BI file from the 2.a folder
+
 REAL BUSINESS DAX (LEVEL 2 CORE)
+
 🧠 What You’ll Build
 
 Using your 3 tables:
@@ -16,6 +19,7 @@ Targets
 ✔ Performance %
 
 🟢 Step 1: Where to Create Measures
+
 Go to Report View
 
 In Fields panel, right-click:
@@ -29,6 +33,7 @@ New Measure
 👉 Always create measures inside Sales table
 
 🟢 Step 2: Total Revenue (Base Measure)
+
 Total Revenue =
 SUMX(
     Sales,
@@ -44,6 +49,7 @@ Apply discount
 👉 Then sum all rows
 
 🟢 Step 3: Total Cost (NEW 🔥)
+
 Total Cost =
 SUMX(
     Sales,
@@ -61,12 +67,14 @@ Multiplies by Quantity
 👉 This is real business logic
 
 🟢 Step 4: Real Profit
+
 Profit =
 [Total Revenue] - [Total Cost]
 
 👉 Simple but powerful
 
 🟢 Step 5: Profit Margin %
+
 Profit Margin % =
 DIVIDE(
     [Profit],
@@ -76,12 +84,14 @@ DIVIDE(
 👉 Format as %
 
 🟢 Step 6: Target Sales (From Targets Table)
+
 Total Target =
 SUM(Targets[Target_Sales])
 
 👉 This comes from a different table
 
 🟢 Step 7: Target vs Actual (NEW 🔥)
+
 Target vs Actual =
 [Total Revenue] - [Total Target]
 
@@ -89,6 +99,7 @@ Target vs Actual =
 
 Positive → Good
 Negative → Bad
+
 🟢 Step 8: Performance % (VERY IMPORTANT)
 Performance % =
 DIVIDE(
@@ -127,6 +138,7 @@ Select Region = North
 ✔ Performance tracking
 
 ⚠️ Common Mistakes
+
 ❌ RELATED not working?
 
 👉 Relationship not created properly
@@ -136,7 +148,9 @@ Select Region = North
 👉 Check:
 
 Cost table duplicates
+
 Wrong joins
+
 ❌ Target not matching?
 
 👉 Month mismatch (Jan vs January)
