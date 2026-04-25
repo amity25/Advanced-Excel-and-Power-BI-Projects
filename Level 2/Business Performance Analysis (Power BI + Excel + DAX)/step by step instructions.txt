@@ -1,6 +1,7 @@
 🚀 NEXT PROJECT (LEVEL 2)
 
 📊 Business Performance Dashboard (Multi-Table + Real Business Logic)
+
 🧠 What Makes This “One Step Advanced”?
 
 Level 1 Project 
@@ -14,8 +15,6 @@ Level 1 Project
 
 This is what real companies do.
 
-📁 Project Name
-Business Performance Analysis (Power BI + Excel + DAX)
 🎯 What You’ll Learn (ONLY 1 LEVEL UP)
 
 We will add:
@@ -29,18 +28,22 @@ We will add:
 Instead of one table, you’ll use 3 datasets:
 
 1️⃣ Sales Data (you already know)
+
 Order_ID
 Product
 Sales
 Quantity
 Discount
+
 2️⃣ Product Cost Data (NEW 🔥)
+
 Product
 Cost Price
 
 👉 Used to calculate real profit
 
 3️⃣ Targets Data (NEW 🔥)
+
 Month
 Target Sales
 
@@ -48,12 +51,15 @@ Target Sales
 
 Target vs Actual
 Performance %
+
 🧠 What Changes from Previous Project?
+
 Feature	Old Project	New Project
 Tables	1	3
 Profit	Assumed	Real (Sales - Cost)
 KPIs	Basic	Business KPIs
 Analysis	Static	Performance tracking
+
 🎯 Final Dashboard Will Show:
 
 ✔ Total Revenue
@@ -64,6 +70,7 @@ Analysis	Static	Performance tracking
 ✔ Underperforming products
 
 🛠️ Tools (Same as before)
+
 Excel
 Power BI
 DAX
@@ -89,8 +96,11 @@ business-performance-project/
 │   ├── sales_data.csv
 │   ├── product_cost.csv
 │   ├── targets.csv
+
 🟢 Step 1A: Create Sales Data
-1. Open Notepad or Excel
+
+1. Open Excel
+
 Paste this:
 Order_ID,Order_Date,Customer_Name,Region,Product,Category,Sales,Quantity,Discount
 1001,2024-01-05,Amit Sharma,North,Laptop,Electronics,55000,1,0.10
@@ -103,10 +113,14 @@ Order_ID,Order_Date,Customer_Name,Region,Product,Category,Sales,Quantity,Discoun
 1008,2024-02-15,Priya Singh,East,Chair,Furniture,2600,2,0.20
 1009,2024-03-01,Amit Sharma,North,Laptop,Electronics,58000,1,0.10
 1010,2024-03-05,Riya Singh,West,Phone,Electronics,32000,2,0.05
+
 3. Save as:
 sales_data.csv
+
 🟢 Step 1B: Create Product Cost Data (NEW 🔥)
-1. Open new file
+
+1. Open new excel
+
 Paste:
 Product,Cost_Price
 Laptop,40000
@@ -114,10 +128,14 @@ Phone,20000
 Table,4000
 Chair,1500
 Headphones,1200
+
 3. Save as:
 product_cost.csv
+
 🟢 Step 1C: Create Target Data (NEW 🔥)
+
 1. Open new file
+
 Paste:
 Month,Target_Sales
 Jan,150000
@@ -125,6 +143,8 @@ Feb,180000
 Mar,200000
 3. Save as:
 targets.csv
+
+
 🧠 What You Just Created
 📊 1. Sales Table
 
@@ -135,6 +155,7 @@ targets.csv
 👉 Used to calculate:
 
 Profit = Revenue - Cost
+
 🎯 3. Target Table
 
 👉 Used to calculate:
@@ -151,6 +172,7 @@ Great—now we move to the next step, slowly and clearly 👇
 Import all 3 files
 Clean them properly
 Prepare for modeling
+
 🟢 Step 2A: Import All Files into Power BI
 📊 1. Open Power BI Desktop
 📥 2. Import Sales Data
@@ -182,6 +204,7 @@ product_cost.csv
 Click:
 
 OK
+
 📥 4. Import Targets Data
 
 Repeat same:
@@ -194,12 +217,14 @@ targets.csv
 
 
 🟢 Step 2B: Clean Sales Table
+
 🔹 1. Rename Table
 Right-click table name
 
 Rename to:
 
 Sales
+
 🔹 2. Fix Data Types
 
 Click each column and set:
@@ -209,22 +234,66 @@ Order_Date	Date
 Sales	Decimal Number
 Quantity	Whole Number
 Discount	Decimal
-🔹 3. Add Month Column
 
-Click:
+🔹 3. Add month and year column
 
-Add Column → Date → Month → Name of Month
+Add Year in Power Query
 
-👉 New column: Jan, Feb, Mar
+🟢 Step-by-Step
 
-🔹 4. Add Year Column
+🟢 Step 1: Open Power Query
 
-Click:
+In Power BI:
+
+Home → Transform Data
+
+👉 Power Query window opens
+
+🟢 Step 2: Select Sales Table
+
+On left side, click:
+
+Sales
+
+🟢 Step 3: Select Order_Date Column
+
+Click on:
+
+Order_Date
+
+👉 Important: Column must be Date type
+
+🟢 Step 4: Add Year Column
+
+Go to top menu:
 
 Add Column → Date → Year → Year
+✅ Result:
+
+A new column appears:
+
+Year
+
+With values like:
+
+2024
+
+🟢 Step 5: Rename Column (if needed)
+Double-click column name
+Ensure it is:
+Year
+🟢 Step 6: Apply Changes
+
+Click:
+
+Close & Apply
+
+
 🟢 Step 2C: Clean Product Cost Table
+
 🔹 Rename:
 Product_Cost
+
 🔹 Check:
 Product → Text
 Cost_Price → Decimal
@@ -232,11 +301,14 @@ Cost_Price → Decimal
 👉 No extra cleaning needed
 
 🟢 Step 2D: Clean Targets Table
+
 🔹 Rename:
 Targets
+
 🔹 Ensure:
 Month → Text
 Target_Sales → Decimal
+
 🟢 Step 2E: Close & Apply
 
 Click:
@@ -268,107 +340,6 @@ Calculate real profit
 
 👉 This is real business analysis
 
-
-Good question—this is an important step 👍
-I’ll show you 2 ways, but you should follow the Power Query method (best practice).
-
-✅ METHOD 1 (RECOMMENDED): Add Year in Power Query
-🟢 Step-by-Step
-🟢 Step 1: Open Power Query
-
-In Power BI:
-
-Home → Transform Data
-
-👉 Power Query window opens
-
-🟢 Step 2: Select Sales Table
-
-On left side, click:
-
-Sales
-🟢 Step 3: Select Order_Date Column
-
-Click on:
-
-Order_Date
-
-👉 Important: Column must be Date type
-
-🟢 Step 4: Add Year Column
-
-Go to top menu:
-
-Add Column → Date → Year → Year
-✅ Result:
-
-A new column appears:
-
-Year
-
-With values like:
-
-2024
-🟢 Step 5: Rename Column (if needed)
-Double-click column name
-Ensure it is:
-Year
-🟢 Step 6: Apply Changes
-
-Click:
-
-Close & Apply
-
-
-
-🧠 What You Just Did
-
-👉 Extracted Year from Date column
-👉 This is used for:
-
-Filtering
-Time analysis
-Growth calculations
-⚠️ If You Don’t See “Date” Options
-
-👉 That means your column is not date type
-
-Fix it:
-Select Order_Date
-
-Go to:
-
-Transform → Data Type → Date
-
-Then repeat Step 4
-
-❌ METHOD 2 (NOT RECOMMENDED BUT EASY)
-
-You can also create a DAX column:
-
-Go to Data View
-
-Click:
-
-New Column
-Enter:
-Year = YEAR(Sales[Order_Date])
-
-👉 But:
-
-❌ This is less efficient
-✅ Use Power Query method (Method 1)
-
-💡 Pro Tip (Important)
-
-Always prefer:
-
-Power Query → for data cleaning
-DAX → for calculations
-🚀 Next Step
-
-Now that Year is added, you're ready for:
-
 👉 
 STEP 3: Data Modeling (connecting tables)
 
@@ -385,6 +356,7 @@ Targets
 👉 We need to connect them like this:
 
 Product_Cost → Sales ← Targets
+
 🟢 Step 1: Go to Model View
 
 In Power BI (left side), click:
@@ -423,6 +395,7 @@ OK
 You’ll see a line:
 
 Sales (*) -------- (1) Product_Cost
+
 🟢 Step 3: Connect Targets → Sales (IMPORTANT)
 🎯 Goal:
 
@@ -452,6 +425,7 @@ Click:
 OK
 ✅ Result:
 Sales (*) -------- (1) Targets
+
 🟢 Step 4: Final Model Should Look Like
         Product_Cost
              |
@@ -473,6 +447,7 @@ Click each line and check:
 
 Sales = Many side
 Others = One side
+
 🟢 Step 6: Test If It Works
 
 Go to Report View
