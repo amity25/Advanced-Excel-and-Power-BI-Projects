@@ -453,7 +453,8 @@ Others = One side
 Go to Report View
 
 Test 1:
-Create a table
+Create a table visualization
+
 Add:
 Product (from Product_Cost)
 Sales (from Sales)
