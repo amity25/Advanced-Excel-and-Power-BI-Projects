@@ -1,0 +1,171 @@
+BUSINESS DASHBOARD (TARGET vs ACTUAL)
+🎯 GOAL
+
+Create a dashboard that answers:
+
+Are we meeting targets?
+Which month is performing well?
+Which region/product is underperforming?
+
+
+🟢 Step 1: Set Up Layout First
+
+Before adding visuals, structure your page:
+
+[ Title ]
+
+[ Total Revenue ] [ Total Target ] [ Performance % ]
+
+[ Bar Chart ]
+
+[ Line Chart ]
+
+[ Table ]
+
+[ Slicers ]
+
+
+🟢 Step 2: Add KPI Cards (Top Section)
+
+📊 A. Total Revenue
+Click Card visual (123 icon)
+
+Drag:
+
+Total Revenue
+📊 B. Total Target
+Add another Card
+
+Drag:
+
+Total Target
+📊 C. Performance %
+Add another Card
+
+Drag:
+
+Performance %
+
+👉 Format:
+
+Turn ON Title
+Increase font size
+
+
+🟢 Step 3: Bar Chart → Target vs Actual by Month
+Click Clustered Column Chart
+Drag fields:
+
+Axis:
+
+Month
+
+Values:
+
+Total Revenue
+Total Target
+✅ Result:
+
+Two bars per month:
+
+Actual vs Target
+
+
+🟢 Step 4: Line Chart → Trend Comparison
+Click Line Chart
+Add:
+
+X-axis:
+
+Month
+
+Values:
+
+Total Revenue
+Total Target
+
+👉 Shows trend over time
+
+
+🟢 Step 5: Table → Detailed Performance
+
+Add Table visual
+Add:
+Product
+Total Revenue
+Total Target
+Performance %
+
+👉 Sort by:
+
+Performance %
+🎯 Insight:
+Low % → underperforming products
+
+
+🟢 Step 6: Add Slicers (Filters)
+🎯 Add:
+Region
+Month
+Category
+
+👉 Place on left side
+
+
+🟢 Step 7: Add Conditional Formatting (IMPORTANT 🔥)
+
+👉 This makes dashboard look professional
+
+For Performance % in Table:
+Click table
+Click dropdown on Performance %
+
+Click:
+
+Conditional Formatting → Background Color
+Set:
+Red → Low values
+Green → High values
+
+👉 Now:
+
+Bad performance = red
+Good performance = green
+
+
+🟢 Step 8: Add Titles
+
+Rename visuals:
+
+“Target vs Actual by Month”
+“Sales Trend vs Target”
+“Product Performance”
+
+
+🟢 Step 9: Test Dashboard
+
+Now test:
+
+Try:
+
+Select:
+
+Month = Jan
+Region = North
+🎉 Result:
+Cards update
+Charts update
+Table updates
+
+👉 This is real interactive dashboard
+
+🧠 What You Just Built
+
+✔ KPI monitoring
+✔ Target vs Actual comparison
+✔ Performance tracking
+✔ Interactive filtering
+
+💡 Business Insight You Can Say
+
+“The dashboard helps identify underperforming months and products by comparing actual sales against targets.”
