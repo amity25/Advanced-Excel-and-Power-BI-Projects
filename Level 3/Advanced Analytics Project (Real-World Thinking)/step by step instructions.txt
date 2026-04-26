@@ -1,0 +1,318 @@
+🚀 LEVEL 3: Advanced Analytics Project (Real-World Thinking)
+🎯 Goal of Level 3
+
+You will now:
+
+Think like a Business Analyst / Data Analyst
+Solve a real business problem
+Use:
+Excel (advanced)
+Power BI (advanced DAX + storytelling)
+Basic Python (optional but powerful)
+
+
+🧭 STEP 0: What You’re Building
+
+Before starting, understand this clearly:
+
+👉 In Level 2, you built a dashboard
+
+👉 In Level 3, you will build:
+
+🔥 A Business Case Study Project
+
+Example:
+
+“Why are sales dropping?”
+“Which customers are most valuable?”
+“How to increase profit?”
+
+📦 STEP 1: Your Dataset (Superstore Style)
+
+Since you asked me to “make” the dataset, I’ll give you a ready-to-use version.
+
+👉 Option 1 (Best Way – Copy to Excel)
+
+Open Excel → Paste this:
+
+Order ID,Order Date,Customer Name,Region,Product Category,Product Name,Sales,Profit,Quantity
+1001,2023-01-05,Amit Sharma,North,Furniture,Chair,500,50,2
+1002,2023-01-07,Rahul Verma,West,Technology,Laptop,1200,200,1
+1003,2023-01-10,Priya Singh,East,Office Supplies,Printer Paper,150,20,5
+1004,2023-01-12,Neha Gupta,South,Furniture,Table,700,80,1
+1005,2023-01-15,Amit Sharma,North,Technology,Mouse,50,10,3
+1006,2023-01-18,Rahul Verma,West,Office Supplies,Notebook,200,30,4
+1007,2023-01-20,Priya Singh,East,Furniture,Sofa,1500,300,1
+1008,2023-01-22,Neha Gupta,South,Technology,Keyboard,100,15,2
+1009,2023-01-25,Amit Sharma,North,Office Supplies,Pen Set,80,10,6
+1010,2023-01-28,Rahul Verma,West,Furniture,Chair,400,40,2
+1011,2023-02-02,Priya Singh,East,Technology,Tablet,800,120,1
+1012,2023-02-05,Neha Gupta,South,Office Supplies,Stapler,60,8,3
+1013,2023-02-08,Amit Sharma,North,Furniture,Desk,900,100,1
+1014,2023-02-12,Rahul Verma,West,Technology,Monitor,600,90,1
+1015,2023-02-15,Priya Singh,East,Office Supplies,Envelope,120,15,5
+
+
+🧠 STEP 2: Understand Your Dataset
+
+You now have:
+
+Customers
+Sales & Profit
+Regions
+Products
+Dates
+
+👉 This is enough to build 3 full projects
+
+
+🪜 STEP 3: Start Customer Segmentation (Main Project)
+
+We begin exactly where I told you before, but now with your dataset.
+
+🔹 Task 1 (Do Now)
+👉 Create Customer Summary using Pivot Table
+
+In Excel:
+
+Step-by-step:
+Select full data
+Insert → Pivot Table
+New Sheet
+👉 Configure Pivot:
+Rows → Customer Name
+Values:
+Sales → SUM
+Profit → SUM
+Order ID → COUNT
+👉 Rename columns:
+Sum of Sales → Total Sales
+Sum of Profit → Total Profit
+Count of Order ID → Order Count
+👉 Sort:
+
+Sort by Total Sales (Largest to Smallest)
+
+🎯 What You Should See
+
+You’ll now clearly see:
+
+Top customers
+Low-value customers
+Frequent buyers
+
+
+
+
+
+🚀 STEP 2: Customer Segmentation (Core of Your Project)
+
+Now we will convert raw numbers into business insights.
+
+Right now you only have:
+
+Total Sales
+Total Profit
+Order Count
+
+👉 But companies don’t look at raw numbers.
+They classify customers into groups like:
+
+🟢 High Value
+🟡 Medium Value
+🔴 Low Value
+
+
+🧠 STEP 2.1: Add a New Column
+
+In your Customer Summary table, add a new column:
+
+👉 Name it: Customer Segment
+
+
+🪜 STEP 2.2: Define Segmentation Logic
+
+We will use Total Sales (simple & beginner-friendly).
+
+👉 Rule:
+If Sales ≥ 2000 → High Value
+If Sales between 1000–1999 → Medium Value
+If Sales < 1000 → Low Value
+
+
+⚙️ STEP 2.3: Apply Formula in Excel
+
+Assuming:
+
+Total Sales is in column B
+First data row is row 2
+👉 Use this formula:
+=IF(B2>=2000,"High Value",IF(B2>=1000,"Medium Value","Low Value"))
+👉 Drag the formula down
+
+Now every customer will automatically get a segment.
+
+🎯 What You Just Did
+
+You converted:
+👉 Data → Insight
+
+Now you can answer:
+
+Who are top customers?
+Who needs attention?
+Who is low priority?
+
+
+🧠 STEP 2.4: Analyze Your Result
+
+Look at your table and think:
+
+👉 Which customers are High Value?
+👉 Are they few or many?
+👉 Who is buying less?
+
+
+
+
+
+
+🚀 STEP 3: Move to Power BI
+🎯 Goal
+
+Turn your segmentation into a visual, interactive dashboard
+
+🪜 STEP 3.1: Load Data into Power BI
+
+👉 Open Power BI Desktop
+
+Then:
+
+Click Get Data
+Choose Excel
+Select your file:
+👉 superstore_data.xlsx
+Click Load
+🧠 Important Note
+
+We will NOT use the pivot table from Excel.
+
+👉 Instead:
+We will rebuild everything in Power BI (this is how real analysts work)
+
+
+🪜 STEP 3.2: Create Customer Summary (in Power BI)
+
+Now we recreate your summary using visuals.
+
+👉 Create a Table Visual
+Go to Report View
+Click Table visual
+👉 Add fields:
+
+Drag these into the table:
+
+Customer Name
+Sales
+Profit
+Order ID
+👉 Fix Aggregations:
+
+In the table:
+
+Sales → should be Sum ✅
+Profit → should be Sum ✅
+Order ID → change to Count
+
+👉 Click dropdown → choose Count
+
+
+🪜 STEP 3.3: Create Customer Segment (DAX)
+
+Now the powerful part.
+
+👉 Create New Column
+Go to Data View
+Click New Column
+👉 Paste this DAX:
+
+Customer Segment = 
+
+IF(
+    'Sheet1'[Sales] >= 2000, "High Value",
+    IF('Sheet1'[Sales] >= 1000, "Medium Value", "Low Value")
+)
+🧠 But Wait (Real Analyst Thinking)
+
+The above is row-level segmentation ❌
+We want customer-level segmentation ✅
+
+👉 So we will fix this in next step (don’t worry)
+
+
+🪜 STEP 3.4: Create Proper Measure (Correct Way)
+
+Click New Measure and use:
+
+Total Sales = SUM('Sheet1'[Sales])
+
+Now:
+
+Customer Segment Measure = 
+SWITCH(
+    TRUE(),
+    [Total Sales] >= 2000, "High Value",
+    [Total Sales] >= 1000, "Medium Value",
+    "Low Value"
+)
+
+🪜 STEP 3.5: Build Visuals
+
+Now create these visuals:
+
+📊 1. Table (Final View)
+
+Columns:
+
+Customer Name
+Total Sales
+Total Profit
+Order Count
+Customer Segment
+
+📊 2. Bar Chart
+Axis → Customer Name
+Values → Total Sales
+
+👉 This shows top customers visually
+
+📊 3. Pie Chart
+Legend → Customer Segment
+Values → Count of Customer Name
+
+👉 This shows:
+
+% High / Medium / Low customers
+
+🎛️ 4. Slicer
+
+Add slicer for:
+
+Region
+
+👉 Now your dashboard becomes interactive
+
+🎯 What You Have Built
+
+You now have:
+✔ Customer segmentation
+✔ Interactive dashboard
+✔ Business insight tool
+
+🧠 Real Insight Thinking
+
+Now ask:
+
+👉 Are most customers low value?
+👉 Should company focus on high-value retention?
+👉 Which region has best customers?
