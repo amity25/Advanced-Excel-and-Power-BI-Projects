@@ -1,0 +1,171 @@
+Customer & Profit Optimization Analysis
+📌 What is this project?
+
+This is a beginner-to-intermediate level data analytics project where I worked on a retail dataset (Superstore data) to solve real business problems.
+
+Instead of just creating charts, the goal of this project is to:
+
+Understand business questions
+Analyze data step-by-step
+Generate insights
+Give recommendations
+🎯 Business Problem
+
+A retail company wants to improve its profitability.
+
+They are facing issues like:
+
+Some products are not profitable
+Some regions are underperforming
+Not all customers contribute equally
+
+👉 My role as a data analyst is to:
+
+Find the problems using data
+Explain them clearly
+Suggest improvements
+📂 Dataset Used
+File: Superstore Sales Dataset (Excel)
+It contains:
+Column	Meaning
+Order Date	When the order was placed
+Sales	Revenue from the order
+Profit	Profit earned
+Quantity	Number of items sold
+Customer Name	Name of customer
+Region	Location of sale
+Category/Sub-Category	Product type
+🧹 Step 1: Data Cleaning (Very Important)
+🔹 What I did:
+Loaded Excel data into Power BI
+Checked for missing values
+Verified data types:
+Date → Order Date
+Number → Sales, Profit, Quantity
+Removed duplicates (if any)
+🔹 Why this matters:
+
+If data is incorrect, your analysis will also be wrong.
+
+📊 Step 2: Creating Basic KPIs
+
+KPIs (Key Performance Indicators) help us understand overall business performance.
+
+🔹 Metrics Created:
+Total Sales → Total revenue
+Total Profit → Total earnings
+Total Orders → Number of orders
+Profit Margin → Profit divided by Sales
+🔹 Why this matters:
+
+These numbers give a quick overview of business health.
+
+📉 Step 3: Profitability Analysis
+🔹 What I did:
+Created a bar chart of Profit by Sub-Category
+Sorted it to find:
+Loss-making products
+High-profit products
+🔹 What I learned:
+Not all products are profitable
+Some products consistently generate losses
+🌍 Step 4: Regional Analysis
+🔹 What I did:
+Compared Sales and Profit across regions
+🔹 What I looked for:
+Regions with high sales but low profit
+🔹 Why this matters:
+
+High sales does not always mean good business performance.
+
+📦 Step 5: Quantity vs Profit Analysis
+
+(Note: Discount column was not available, so I used Quantity instead)
+
+🔹 What I did:
+Created a scatter plot:
+X-axis → Quantity
+Y-axis → Profit
+🔹 What I analyzed:
+Does selling more items increase profit?
+🔹 Key learning:
+High quantity sales do not always mean high profit
+➕ Extra Metric: Profit per Unit
+🔹 What I did:
+
+Calculated:
+
+Profit per Unit = Profit / Quantity
+
+🔹 Why this matters:
+
+This shows how much profit we earn per item sold.
+
+👥 Step 6: Customer Analysis
+🔹 What I did:
+Created a table with:
+Customer Name
+Total Sales
+Total Profit
+🔹 What I found:
+Some customers contribute much more than others
+🔹 Why this matters:
+
+Businesses should focus on valuable customers.
+
+🧠 Step 7: Customer Segmentation
+🔹 What I did:
+
+Divided customers into:
+
+High Value
+Medium Value
+Low Value
+
+Based on their total sales.
+
+🔹 Why this matters:
+
+Helps in targeted marketing and retention strategies.
+
+📊 Step 8: Dashboard Creation
+🔹 Dashboard includes:
+KPI Cards (Sales, Profit, Orders, Margin)
+Profit by Sub-Category
+Region Analysis
+Quantity vs Profit
+Customer Table
+🔹 Goal:
+
+Make data easy to understand for business users.
+
+🔍 Key Insights (What I Found)
+Some product categories are consistently loss-making
+Selling more quantity does not always increase profit
+Some regions have strong sales but weak profitability
+A small number of customers generate most of the profit
+💡 Business Recommendations
+
+Based on analysis:
+
+Reduce focus on loss-making products
+Improve pricing or cost strategy in low-profit regions
+Focus on high-value customers
+Promote products with higher profit per unit
+🛠 Tools Used
+Power BI (for dashboard and analysis)
+Microsoft Excel (for dataset)
+📁 Project Files
+Dataset (.xlsx)
+Power BI file (.pbix)
+Screenshots of dashboard
+🚀 What I Learned
+How to think like a data analyst
+How to connect data with business problems
+How to create meaningful insights (not just charts)
+How to present findings clearly
+📌 Final Note
+
+This project helped me move from:
+❌ Just creating dashboards
+✅ To solving real business problems using data
